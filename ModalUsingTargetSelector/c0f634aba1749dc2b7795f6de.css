@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+$speed: 0.25s;
+$border-radius: 16px;
+$ui-radius: 4px;
+$ui-height: 40px;
+$light: #e5efe9;
+$mid: #5a72b5;
+$dark: #121943;
+$box-shadow: -20px 20px 35px 1px rgba(10, 49, 86, 0.18);
+$focus-ring: 0px 0px 0px 2px $dark;
+$border: 1px solid $mid;
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-image: linear-gradient(48deg, $mid 0%, $light 70%);
+	color: $dark;
+	display: grid;
+	flex-direction: column;
+	font-family: "Lato", sans-serif;
+	font-size: 1em;
+	height: 100vh;
+	place-items: center;
+	line-height: 1.2;
+}
+.heading {
+	font-size: 1.5em;
+	margin-bottom: 12px;
+}
+.card {
+	background: #fff;
+	background-image: linear-gradient(48deg, #fff 0%, $light 100%);
+	border-top-right-radius: $border-radius;
+	border-bottom-left-radius: $border-radius;
+	box-shadow: $box-shadow;
+	display: flex;
+	flex-direction: column;
+	padding: 32px;
+	margin: 40px;
+	max-width: 400px;
+	width: 100%;
+}
+.content-wrapper {
+	font-size: 1.1em;
+	margin-bottom: 44px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+// Button
+.button {
+	align-items: center;
+	background: $light;
+	border: $border;
+	border-radius: $ui-radius;
+	color: $dark;
+	cursor: pointer;
+	display: flex;
+	font-size: 1em;
+	font-weight: 700;
+	height: $ui-height;
+	justify-content: center;
+	width: 150px;
+	&:focus {
+		border: 2px solid transparent;
+		box-shadow: $focus-ring;
+		outline: solid 4px transparent;
+	}
+}
+// Anchor
+.link {
+	color: $dark;
+	&:focus {
+		box-shadow: $focus-ring;
+	}
+}
+// Input
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	.label {
+		align-items: baseline;
+		display: flex;
+		font-weight: 700;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+	.optional {
+		color: $mid;
+		font-size: 0.9em;
+	}
+	.input {
+		border: $border;
+		border-radius: $ui-radius;
+		height: $ui-height;
+		padding: 8px;
+	}
+}
+code {
+	background: $light;
+	border: 1px solid $mid;
+	border-radius: $ui-radius;
+	padding: 2px 4px;
+}
